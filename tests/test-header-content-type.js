@@ -1,9 +1,10 @@
-var ct = require('../lib/headers/content-type.js');
+var cto = require('../lib/headers/content-type.js');
+var ct = new cto();
 var assert = require('assert');
 var header = {};
 
-header.__defineSetter__(ct.name, ct.setter);
-header.__defineGetter__(ct.name, ct.getter);
+header.__defineSetter__(ct.key, ct.setter.bind(ct));
+header.__defineGetter__(ct.key, ct.getter.bind(ct));
 assert.equal(header['content-type'].value, "text/plain");
 
 header['content-type'].parse("multipart/mixed; boundary=frontier");
