@@ -1,0 +1,24 @@
+{
+  "name": "email-obj",
+  "version": "0.0.1",
+  "description": "Parse and render emails in a object oriented way.",
+  "keywords": [],
+  "author": "Josh Erickson <josh@snoj.us>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snoj/email-obj.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index",
+  "bugs": {
+    "url": "https://github.com/snoj/email-obj/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
