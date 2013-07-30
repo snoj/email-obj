@@ -24,6 +24,7 @@ Some headers are known and can be a pain to work with. Custom header handlers ca
 ```
 var msg = new emailobj();
 msg.
+```
 # API
 
 ## emailobj.constructor()
@@ -61,8 +62,8 @@ Sets a header value. See specific header handler for details of how values are h
 Compiles the message into an array of strings. opts.asString forces a return of a complete string instead of an array.
 
 ## emailobj.prototype.headers
-
 A collection of getter/setters to handle the headers. It is recommended to use emailobj.prototype.setHeader for genericHeader but specially craft headers may require this to get/set specifics.
+
 ```
 msg.setHeader('content-type', "multipart/mixed") // initialize
 msg.headers['content-type'].boundary = "==w2gjaj9arwvawrbgaerwhapnaspga";
@@ -71,6 +72,7 @@ msg.headers['content-type'].boundary = "==w2gjaj9arwvawrbgaerwhapnaspga";
 msg.setHeader('content-type', 'multipart/mixed; boundary===w2gjaj9arwvawrbgaerwhapnaspga');
 msg.headers['content-type'].boundary = "==somethingelsewedecidedtouseinstead";
 ```
+
 ## emailobj.parse(rawEmail)
 Parses a raw email message and returns an emailobj.
 
